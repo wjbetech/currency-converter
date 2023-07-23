@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Currency Converter | @wjbetech</title>
+</head>
+<body>
+
+    <!-- nav-bar -->
+    <div class="nav">
+
+        <!-- logo -->
+        <a href="https://github.com/wjbetech/"><img src="images/wjbetech-logo-transparent.png" alt=""></a>
+
+        <!-- toggle button -->
+        <button id="toggle"></button>
+
+    </div>
+
+    <!-- card -->
+    <div class="container">
+        <form>
+            <h2>Currency Converter</h2>
+            <div class="amount">
+                <p>Amount: </p>
+                <input type="text" value="1">
+            </div>
+            <div class="convert-box">
+                <div class="from">
+                    <p>From: </p>
+                    <div class="select-input">
+                        <img
+                        src="https://flagcdn.com/w40/ua.png">
+                        <select></select>
+                    </div>
+                </div>
+                <div class="reverse">
+                <i class='bx bx-transfer bx-sm'></i>
+                </div>
+                <div class="to">
+                    <p>To: </p>
+                    <div class="select-input">
+                        <img
+                        src="https://flagcdn.com/w40/gb.png">
+                        <select></select>
+                    </div>
+                </div>
+            </div>
+            <div class="result">Getting exchange rate...</div>
+            <button>Get Exchange Rate</button>
+        </form>
+    </div>
+
+    
+
+    <script type="module" src="apikey.js"></script>
+    <script src="countries.js"></script>
+    <script src="index.js"></script>
+    
+</body>
+</html>

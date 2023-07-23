@@ -1,0 +1,193 @@
+:root {
+    /* primaries */
+    --success: #0F9D58;
+    --info: #009DC4;
+    --warning: #FFCC00;
+    --danger: #B22222;
+
+    /* clean web */
+    --light-bg: #f4eded;
+    --light-frame: #d3d0d0;
+    --light-font: #596E79;
+    --dark-bg: #575C62;
+    --dark-frame: #838B91;
+    --dark-font: #BFC4C5;
+    --light-button-hover: #d8d8d8;
+    
+    /* toggler gradients */
+    --light-toggler: linear-gradient(48deg, rgba(60,186,179,1) 0%, rgba(194,194,194,1) 0%, rgba(85,85,85,1) 0%, rgba(163,163,163,1) 100%);
+    --dark-toggler: linear-gradient(236deg, rgba(60,186,179,1) 0%, rgba(194,194,194,1) 0%, rgba(255,255,255,1) 0%, rgba(163,163,163,1) 100%);
+    
+    /* box-shadow */
+    --light-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    --dark-box-shadow: rgba(255, 255, 255, 0.35) 0px 5px 15px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Manrope', sans-serif;
+}
+
+body {
+    background-color: var(--light-bg);
+    color: var(--light-font)
+}
+
+h2 {
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+form {
+    box-shadow: var(--light-box-shadow);
+}
+
+#toggle {
+    width: 40px;
+    height: 40px;
+    margin: 25px;
+    margin-right: 35px;
+    border: none;
+    background: linear-gradient(48deg, rgba(60,186,179,1) 0%, rgba(194,194,194,1) 0%, rgba(85,85,85,1) 0%, rgba(163,163,163,1) 100%);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.nav {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    background-color: var(--light-bg );
+}
+
+.nav img {
+    display: grid;
+    margin-top: 20px;
+    margin-left: 15px;
+    height: 50px;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(90vh - 90px);
+    overflow: hidden;
+}
+
+.container form {
+    padding: 30px 45px;
+    background-color: var(--light-frame);
+    border-radius: 12px;
+}
+
+.container form p {
+    font-size: 1rem;
+    margin-bottom: 7px;
+}
+
+.container form input {
+    height: 40px;
+    width: 90%;
+    border-radius: 5px;
+    font-size: 1rem;
+    padding: 0 10px;
+    background-color: transparent;
+    border: 1px solid var(--light-font);
+    outline: none;
+    color: var(--light-font)
+}
+
+.container form input:hover {
+    border: 1px solid var(--info)
+}
+
+.container form .convert-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.container form .from, .container form .to {
+    width: 100%;
+}
+
+.container .convert-box .select-input {
+    display: flex;
+    width: 100%;
+    border: 1px solid var(--light-font);
+    border-radius: 5px;
+    height: 40px;
+    align-items: center;
+    background-color: transparent;
+    cursor: pointer;
+    transform: all 0.3s ease;
+}
+
+.container .convert-box .select-input:hover {
+    border: 1px solid var(--info);
+}
+
+.container .convert-box .select-input img {
+    max-width: 35px;
+    max-height: 30px;
+    padding: 10px;
+    border-radius: 16px;
+}
+
+.container .convert-box .select-input select {
+    width: 100%;
+    cursor: pointer;
+    font-size: 1rem;
+    background-color: transparent;
+    border: none;
+    color: var(--light-font);
+}
+
+.container .convert-box .select-input select option {
+    color: var(--light-font);
+}
+
+.container .convert-box .reverse {
+    cursor: pointer;
+    margin-top: 32px;
+    color: var(--light-font);
+    transition: all 0.3s ease;
+}
+
+.container .convert-box .reverse:hover {
+    color: var(--info);
+}
+
+.container form .result {
+    font-size: 1.1rem;
+    margin: 20px 0 30px;
+}
+
+.container form button {
+    width: 100%;
+    height: 42px;
+    color: var(--light-font);
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+}
+
+.container form button:hover {
+    background-color: var(--light-button-hover);
+    box-shadow: var(--light-box-shadow);
+    color: var(--light-font);
+    transition: all 0.3s ease;
+}
+
+
+
+
+
+
+
+
