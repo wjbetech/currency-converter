@@ -12,6 +12,8 @@
     --dark-bg: #575C62;
     --dark-frame: #838B91;
     --dark-font: #BFC4C5;
+
+    /* buttons */
     --light-button-hover: #d8d8d8;
     
     /* toggler gradients */
@@ -21,6 +23,7 @@
     /* box-shadow */
     --light-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     --dark-box-shadow: rgba(255, 255, 255, 0.35) 0px 5px 15px;
+
 }
 
 * {
@@ -31,7 +34,7 @@
 
 body {
     background-color: var(--light-bg);
-    color: var(--light-font)
+    color: var(--light-font);
 }
 
 h2 {
@@ -41,6 +44,23 @@ h2 {
 
 form {
     box-shadow: var(--light-box-shadow);
+}
+
+form .dark-mode {
+    border-color: var(--dark-font);
+    color: var(--dark-font);
+}
+
+.container form input.dark-theme {
+    color: var(--dark-font);
+}
+
+.container div.select-input.dark-mode {
+    border-color: var(--dark-font);
+}
+
+.container form div.reverse.dark-theme {
+    color: var(--dark-font);
 }
 
 #toggle {
@@ -55,11 +75,35 @@ form {
     transition: all 0.3s ease;
 }
 
+#toggle.dark-mode {
+    background: var(--dark-toggler);
+}
+
+.dark-mode {
+    background-color: var(--dark-bg);
+    color: var(--dark-font);
+    --light-frame: #838B91;
+}
+
+:not(.container) .dark-theme {
+    border-color: var(--dark-font) !important;
+}
+
+.container .convert-box .reverse {
+    color: var(--dark-font);
+}
+
 .nav {
     display: grid;
     grid-template-columns: auto auto;
     justify-content: space-between;
     background-color: var(--light-bg );
+}
+
+.nav.dark-mode {
+    background-color: var(--dark-bg);
+    color: var(--dark-font);
+    --light-frame: #838B91;
 }
 
 .nav img {
@@ -75,6 +119,10 @@ form {
     justify-content: center;
     min-height: calc(90vh - 90px);
     overflow: hidden;
+}
+
+.container .convert-box .select-input .dark-mode {
+    color: var(--dark-font);
 }
 
 .container form {
@@ -165,7 +213,8 @@ form {
 
 .container form .result {
     font-size: 1.1rem;
-    margin: 20px 0 30px;
+    text-align: center;
+    margin: 30px auto;
 }
 
 .container form button {
